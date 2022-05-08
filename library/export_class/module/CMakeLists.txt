@@ -4,9 +4,7 @@ project(module)
 
 aux_source_directory(. MODULE_SRC)
 
-add_compile_options(-DMODULE_DLL)
-add_compile_options(-DDLL_EXPORTS)
-add_compile_options(-fvisibility=hidden)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DMODULE_DLL -DDLL_EXPORTS -Wall -Werror -fPIC -fvisibility=hidden")
 
 add_library(module SHARED ${MODULE_SRC})
 
