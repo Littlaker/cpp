@@ -7,7 +7,7 @@
 
 namespace library {
 
-class MODULE_LOCAL Module 
+class MODULE_API Module 
 {
 public:
     Module(std::string name, std::string version);
@@ -16,11 +16,14 @@ public:
     Module(const Module&) = delete;
     Module& operator=(const Module&) = delete; 
 
-    Module(const Module&&) = delete;
-    Module& operator=(const Module&&) = delete;
+    Module(Module&&);
+    Module& operator=(Module&&);
 
     std::string getModuleName() const;
     std::string getModuleVersion() const;
+
+    void setModuleName(const std::string& name);
+    void setModuleVersion(const std::string& name);
 
     void printModuleInfo() const;
 private:    
