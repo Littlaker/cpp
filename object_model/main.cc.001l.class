@@ -1,0 +1,112 @@
+Vtable for A
+A::_ZTV1A: 3 entries
+0     (int (*)(...))0
+8     (int (*)(...))(& _ZTI1A)
+16    (int (*)(...))A::a
+
+Class A
+   size=16 align=8
+   base size=12 base align=8
+A (0x0x7f2728323420) 0
+    vptr=((& A::_ZTV1A) + 16)
+
+Vtable for B
+B::_ZTV1B: 4 entries
+0     (int (*)(...))0
+8     (int (*)(...))(& _ZTI1B)
+16    (int (*)(...))B::a
+24    (int (*)(...))B::b
+
+Class B
+   size=16 align=8
+   base size=16 base align=8
+B (0x0x7f27281cb1a0) 0
+    vptr=((& B::_ZTV1B) + 16)
+A (0x0x7f27283235a0) 0
+      primary-for B (0x0x7f27281cb1a0)
+
+Vtable for C
+C::_ZTV1C: 4 entries
+0     (int (*)(...))0
+8     (int (*)(...))(& _ZTI1C)
+16    (int (*)(...))C::a
+24    (int (*)(...))C::c
+
+Class C
+   size=16 align=8
+   base size=16 base align=8
+C (0x0x7f27281cb270) 0
+    vptr=((& C::_ZTV1C) + 16)
+A (0x0x7f2728323720) 0
+      primary-for C (0x0x7f27281cb270)
+
+Vtable for D
+D::_ZTV1D: 10 entries
+0     (int (*)(...))0
+8     (int (*)(...))(& _ZTI1D)
+16    (int (*)(...))D::a
+24    (int (*)(...))D::b
+32    (int (*)(...))D::c
+40    (int (*)(...))D::d
+48    (int (*)(...))-16
+56    (int (*)(...))(& _ZTI1D)
+64    (int (*)(...))D::_ZThn16_N1D1aEv
+72    (int (*)(...))D::_ZThn16_N1D1cEv
+
+Class D
+   size=40 align=8
+   base size=36 base align=8
+D (0x0x7f272833a000) 0
+    vptr=((& D::_ZTV1D) + 16)
+B (0x0x7f27281cb2d8) 0
+      primary-for D (0x0x7f272833a000)
+A (0x0x7f2728323840) 0
+        primary-for B (0x0x7f27281cb2d8)
+C (0x0x7f27281cb340) 16
+      vptr=((& D::_ZTV1D) + 64)
+A (0x0x7f27283238a0) 16
+        primary-for C (0x0x7f27281cb340)
+
+Vtable for E
+E::_ZTV1E: 20 entries
+0     32
+8     16
+16    (int (*)(...))0
+24    (int (*)(...))(& _ZTI1E)
+32    (int (*)(...))E::a
+40    (int (*)(...))E::b
+48    (int (*)(...))E::c
+56    (int (*)(...))E::e
+64    18446744073709551600
+72    18446744073709551600
+80    (int (*)(...))-16
+88    (int (*)(...))(& _ZTI1E)
+96    (int (*)(...))E::_ZTv0_n24_N1E1aEv
+104   (int (*)(...))E::_ZTv0_n32_N1E1bEv
+112   18446744073709551584
+120   18446744073709551584
+128   (int (*)(...))-32
+136   (int (*)(...))(& _ZTI1E)
+144   (int (*)(...))E::_ZTv0_n24_N1E1aEv
+152   (int (*)(...))E::_ZTv0_n32_N1E1cEv
+
+VTT for E
+E::_ZTT1E: 3 entries
+0     ((& E::_ZTV1E) + 32)
+8     ((& E::_ZTV1E) + 96)
+16    ((& E::_ZTV1E) + 144)
+
+Class E
+   size=48 align=8
+   base size=12 base align=8
+E (0x0x7f272833a070) 0
+    vptridx=0 vptr=((& E::_ZTV1E) + 32)
+B (0x0x7f27281cb410) 16 virtual
+      vptridx=8 vbaseoffset=-24 vptr=((& E::_ZTV1E) + 96)
+A (0x0x7f2728323b40) 16
+        primary-for B (0x0x7f27281cb410)
+C (0x0x7f27281cb478) 32 virtual
+      vptridx=16 vbaseoffset=-32 vptr=((& E::_ZTV1E) + 144)
+A (0x0x7f2728323ba0) 32
+        primary-for C (0x0x7f27281cb478)
+
